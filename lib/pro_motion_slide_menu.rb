@@ -20,7 +20,7 @@ Motion::Project::App.setup do |app|
   # https://github.com/HipByte/motion-cocoapods/issues/38
   #
   app.pods do
-    pod 'PKRevealController'
+    pod 'ECSlidingViewController'
   end
 
 end
