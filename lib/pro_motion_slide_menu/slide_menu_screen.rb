@@ -92,7 +92,7 @@ module ProMotionSlideMenu
     end
 
     def default_completion_block
-      -> (completed) { true }
+      -> () { true }
     end
 
   end
