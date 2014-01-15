@@ -22,21 +22,21 @@ module ProMotionSlideMenu
       screen
     end
 
-    def show(side)
-      self.show_left if side == :left
-      self.show_right if side == :right
+    def show(side, animated=true)
+      self.show_left(animated) if side == :left
+      self.show_right(animated) if side == :right
     end
 
-    def show_left
-      self.anchorTopViewToLeftAnimated true, onComplete: default_completion_block
+    def show_left(animated=true)
+      self.anchorTopViewToLeftAnimated animated, onComplete: default_completion_block
     end
 
-    def show_right
-      self.anchorTopViewToRightAnimated true, onComplete: default_completion_block
+    def show_right(animated=true)
+      self.anchorTopViewToRightAnimated animated, onComplete: default_completion_block
     end
 
-    def hide
-      self.resetTopViewAnimated true, onComplete: default_completion_block
+    def hide(animated=true)
+      self.resetTopViewAnimated animated, onComplete: default_completion_block
     end
 
     def left_controller=(c)
